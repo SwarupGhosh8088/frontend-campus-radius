@@ -72,7 +72,7 @@ const Home = ({ user, cllg, setCllg }) => {
 
     return (
         <Fade>
-            <div className=" flex bg-white  flex-col gap-10 p-3 m-4 mt-15 md:mt-28">
+            <div className=" flex bg-white   flex-col gap-10 p-3 m-4 mt-15 md:mt-28">
 
 
 
@@ -122,7 +122,7 @@ const Home = ({ user, cllg, setCllg }) => {
 
                 {/* DASHBOARD */}
                 <div className="flex w-full justify-center">
-                    <div className="w-full max-w-6xl h-50 md:h-120  rounded-2xl shadow-lg overflow-hidden">
+                    <div className="w-full max-w-6xl h-40 md:h-120  rounded-2xl shadow-lg overflow-hidden">
 
                         <img
                             src={images[current]}

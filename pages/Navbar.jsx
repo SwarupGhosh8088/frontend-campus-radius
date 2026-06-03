@@ -68,7 +68,7 @@ const Navbar = ({ user, setUser, cllg, setCllg }) => {
 
 
     return (
-        <div className=' fixed top-0 left-0 right-0 flex flex-col    justify-around bg-white z-50 h-15 md:h-27 md:shadow'>
+        <div className=' fixed top-0 left-0 right-0 flex flex-col     justify-around bg-white z-50 h-15 md:h-27 md:shadow'>
 
 
             <div className=' hidden md:flex relative justify-around  items-center'>
@@ -251,9 +251,9 @@ const Navbar = ({ user, setUser, cllg, setCllg }) => {
 
                     <button
                         onClick={() => navigate(`/pagesearch/${search}`)}
-                        className="bg-purple-600  w-15 h-12 cursor-pointer  hover:bg-purple-700 text-white px-5 py-3 transition-all duration-300"
+                        className="bg-purple-700  w-12 h-12 cursor-pointer rounded-full  items-center  hover:bg-purple-800 text-white px-3 py-3 transition-all duration-300"
                     >
-                        <FaSearch className='w-7' />
+                        <FaSearch className='text-xl text-center  rounded-full' />
                     </button>
 
                 </div>
