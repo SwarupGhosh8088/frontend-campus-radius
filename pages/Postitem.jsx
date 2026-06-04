@@ -156,7 +156,7 @@ export default function PostItem({user,setUser}) {
       <div className="min-h-screen flex items-center mt-28 justify-center bg-gray-100 p-4">
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-2xl bg-white p-8 rounded-2xl shadow-lg space-y-4"
+          className="w-full  bg-white p-8 rounded-2xl shadow-lg space-y-4"
         >
           <h1 className="text-3xl font-bold text-center">
               Post Rental Item 
