@@ -90,7 +90,7 @@ const Navbar = ({ user, setUser, cllg, setCllg }) => {
                     <IoLocationSharp className="text-purple-700 text-2xl" />
 
                     <input
-                        value={user?.college || cllg ||"Select Colleges"}
+                        value={cllg || user?.college ||"Select Colleges"}
                         readOnly
                         className="w-full outline-none bg-transparent cursor-pointer"
                     />
