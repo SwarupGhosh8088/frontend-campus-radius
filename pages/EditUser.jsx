@@ -88,8 +88,8 @@ export default function EditUser() {
       
       setTimeout(() => {
       
-        navigate("/user");
-        window.location.reload();
+        navigate("/");
+        
       }, 1200);
       
     } catch (err) {
