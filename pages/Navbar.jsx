@@ -52,8 +52,7 @@ const Navbar = ({ user, setUser, cllg, setCllg }) => {
                         Authorization: `Bearer ${token}`,
                     },
                 });
-
-                console.log(res.data.data);
+            
                 setUser(res.data.data);
                 setCllg(res.data.data.college);
             } catch (err) {
@@ -91,7 +90,7 @@ const Navbar = ({ user, setUser, cllg, setCllg }) => {
                     <IoLocationSharp className="text-purple-700 text-2xl" />
 
                     <input
-                        value={cllg || "Select College"}
+                        value={user?.college || "Select College"}
                         readOnly
                         className="w-full outline-none bg-transparent cursor-pointer"
                     />

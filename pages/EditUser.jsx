@@ -88,7 +88,8 @@ export default function EditUser() {
       
       setTimeout(() => {
       
-        navigate("/");
+        navigate("/user");
+
         
       }, 1200);
       
