@@ -9,7 +9,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    email: "",
+    username: "",
     password: ""
   });
 
@@ -65,10 +65,10 @@ export default function Login() {
           {/* email */}
           <FaUser className="absolute top-24 left-1 md:left-4"></FaUser>
           <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
+            type="username"
+            name="username"
+            placeholder="username"
+            value={formData.username}
             onChange={handleChange}
             className="w-70 border p-2  rounded-lg"
           />

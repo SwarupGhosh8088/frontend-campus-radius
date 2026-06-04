@@ -6,7 +6,7 @@ import Fade from "../components/Fade.jsx";
 
 export default function EditUser() {
   const [form, setForm] = useState({
-    username: "",
+    email: "",
     college: "",
     phone: "",
   });
@@ -37,7 +37,7 @@ export default function EditUser() {
         setUser(userData);
 
         setForm({
-          username: userData.username || "",
+          email: userData.email || "",
           college: userData.college || "",
           phone: userData.phone || "",
         });
@@ -65,7 +65,7 @@ export default function EditUser() {
       const token = localStorage.getItem("token");
 
       const data = new FormData();
-      data.append("username", form.username);
+      data.append("email", form.email);
       data.append("college", form.college);
       data.append("phone", form.phone);
 
@@ -85,10 +85,13 @@ export default function EditUser() {
       );
 
       setMessage(res.data.message || "Profile updated successfully");
-
+      
       setTimeout(() => {
+      
         navigate("/user");
+        window.location.reload();
       }, 1200);
+      
     } catch (err) {
       setMessage(
         err.response?.data?.message || "Failed to update profile"
@@ -109,7 +112,7 @@ export default function EditUser() {
             Edit Profile
           </h1>
           <p className="text-gray-500 mt-1">
-            Update your account information and profile details.
+            Update your  profile details.
           </p>
         </div>
 
@@ -169,15 +172,15 @@ export default function EditUser() {
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Username
+                Email
               </label>
 
               <input
                 type="text"
-                name="username"
-                value={form.username}
+                name="email"
+                value={form.email}
                 onChange={handleChange}
-                placeholder="Enter your username"
+                placeholder="Enter your email id"
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
               />
             </div>
@@ -215,7 +218,7 @@ export default function EditUser() {
 
           {/* Message */}
           {message && (
-            <div className="mt-5 p-3 rounded-lg border border-green-200 bg-green-50">
+            <div className="mt-5 p-3 rounded-3xl text-center border border-green-200 bg-green-50">
               <p className="text-sm text-green-700">
                 {message}
               </p>
@@ -227,7 +230,7 @@ export default function EditUser() {
             <button
               type="button"
               onClick={() => navigate("/user")}
-              className="px-5 py-2.5 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+              className="px-5 py-2.5 border border-gray-300 rounded-3xl hover:bg-gray-100 transition"
             >
               Cancel
             </button>
@@ -235,7 +238,7 @@ export default function EditUser() {
             <button
               type="submit"
               disabled={loading}
-              className="px-5 py-2.5 bg-black text-white rounded-lg hover:bg-gray-800 transition disabled:opacity-50"
+              className="px-5 py-2.5 bg-purple-600 text-white rounded-3xl hover:bg-purple-700  cursor-pointer transition disabled:opacity-50"
             >
               {loading ? "Saving..." : "Save Changes"}
             </button>

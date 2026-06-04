@@ -72,7 +72,7 @@ const Home = ({ user, cllg, setCllg }) => {
 
     return (
         <Fade>
-            <div className=" flex bg-white   flex-col gap-10 p-3 m-4 mt-15 md:mt-28">
+            <div className="w-full min-h-screen bg-white flex flex-col gap-10 p-3 mt-15 md:mt-28">
 
 
 
@@ -99,7 +99,7 @@ const Home = ({ user, cllg, setCllg }) => {
                 </div>
 
 
-                <div className=" md:hidden flex flex-wrap items-center mt-13 justify-center bg-white  gap-2  ">
+                <div className=" md:hidden flex flex-wrap items-center mt-13 justify-center bg-white border border-mist-300 shadow-2xl shadow-purple-300 rounded-2xl p-3  gap-2  ">
                     {
                         categories.map((item,index)=>(
                             <div key={index}
@@ -245,7 +245,7 @@ const Home = ({ user, cllg, setCllg }) => {
                     <p className=" md:hidden text-center mt-10">Loading...</p>
                 ) : (
 
-                    <div className=" md:hidden h-full rounded-2xl bg-white  ">
+                    <div className=" md:hidden bg-gray-100 h-full rounded-2xl p-3 ">
 
 
                         <h1 className="text-xl font-semibold rounded-2xl p-3  mb-6">
@@ -305,7 +305,7 @@ const Home = ({ user, cllg, setCllg }) => {
                                                 Rent it: ₹ {(item.pricePerMonth / 30).toFixed(2)}/day
                                             </p>
 
-                                            <p className="text-sm font text-grey-500 ">
+                                              <p className="text-sm font text-grey-500 ">
                                                 Buy: ₹ {item.sellingPrice}
                                             </p>
 

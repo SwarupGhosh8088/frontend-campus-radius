@@ -13,7 +13,7 @@ export default function Register() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    email: "",
+    username: "",
     password: ""
   });
 
@@ -37,11 +37,12 @@ export default function Register() {
 
       setMessage(res.data.message || "Registered Successfully");
 
-      // 🔥 store email for OTP
-      localStorage.setItem("email", formData.email);
+      //  store email for OTP
+      // localStorage.setItem("email", formData.email);
 
-      // redirect to OTP page
-      navigate("/otpverify");
+      //  redirect to OTP page
+      // navigate("/otpverify");
+      navigate("/login")
 
     } catch (error) {
       setMessage(error.response?.data?.message || "Something went wrong");
@@ -66,10 +67,10 @@ export default function Register() {
           <div className="relative w-70">
             <FaUser className="absolute top-3 left-3 text-gray-500" />
             <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
+              type="username"
+              name="username"
+              placeholder="username"
+              value={formData.username}
               onChange={handleChange}
               className="w-full border p-2 pl-10 rounded-lg"
             />

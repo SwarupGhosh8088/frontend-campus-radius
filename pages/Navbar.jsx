@@ -124,7 +124,7 @@ const Navbar = ({ user, setUser, cllg, setCllg }) => {
 
                     {/* notification */}
 
-                    <div className='relative hidden  md:flex flex-col'>
+                    <div onClick={()=>navigate("/notify")} className='relative hidden  md:flex flex-col'>
                         <h1 className=' bg-red-700 absolute w-5  h-5 -top-4 left-3 text-white rounded-4xl text-center'>1</h1>
                         <FaBell className="text-2xl  hover:text-purple-700 cursor-pointer"></FaBell>
 
@@ -205,7 +205,7 @@ const Navbar = ({ user, setUser, cllg, setCllg }) => {
                     <div className='flex items-center gap-4 justify-around'>
 
 
-                        <div className='relative  md:flex flex-col'>
+                        <div onClick={()=>navigate("/notify")} className='relative  md:flex flex-col'>
                             <h1 className=' bg-red-700 absolute w-4 h-4 -top-3 left-4 items-center  text-white rounded-4xl text-center'>1</h1>
                             <FaBell className="text-2xl  hover:text-purple-700 cursor-pointer"></FaBell>
 

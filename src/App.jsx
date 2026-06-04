@@ -15,6 +15,10 @@ import ProtectedRoute from "../components/ProtectedRoute";
 import RentalItemPage from "../pages/RentalItemPage";
 import Pagesearch from "../pages/Pagesearch";
 import Updatepost from "../pages/Updatepost";
+import Notification from "../pages/Notification";
+
+
+
 function App() {
   const [user, setUser] = useState(null);
   const [cllg, setCllg] = useState(null);
@@ -64,6 +68,7 @@ function App() {
         <Route path="/rentalitem/:id" element={<RentalItemPage/>}/>
         <Route path="/pagesearch/:name" element={<Pagesearch/>}/> 
         <Route path="/pagesearch/cat/:category" element={<Pagesearch/>}/> 
+        <Route path="/notify" element={<Notification/>}/> 
 
         <Route
           path="/user"
@@ -77,8 +82,8 @@ function App() {
         <Route
           path="/postitem"
           element={
-            <ProtectedRoute user={user}>
-              <Postitem />
+            <ProtectedRoute  >
+              <Postitem user={user} setUser={setUser}/>
             </ProtectedRoute>
           }
         />

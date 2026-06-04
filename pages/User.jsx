@@ -48,7 +48,7 @@ export default function UserDashboard({ user, setUser }) {
     <>
       <div>
         <div className="flex items-center gap-3  mb-10">
-          <div className="w-10 h-10 bg-blue-600 text-white flex items-center justify-center rounded-full">
+          <div className="w-10 h-10 bg-purple-600 text-white flex items-center justify-center rounded-full">
             <FaUser />
           </div>
 
@@ -173,15 +173,15 @@ export default function UserDashboard({ user, setUser }) {
 
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-8 text-center">
               <p className="text-gray-500">
-                Email: {user?.email}
+                Email: {user?.email || "N/A"}
               </p>
 
               <p className="text-gray-500">
-                Mobile No: {user?.phone}
+                Mobile No: {user?.phone|| "N/A"}
               </p>
 
               <p className="text-gray-500">
-                College: {user?.college}
+                College: {user?.college|| "N/A"}
               </p>
             </div>
 
