@@ -137,7 +137,7 @@ const Home = ({ user, cllg, setCllg }) => {
 
                 {/* LOADING */}
                 {loading ? (
-                    <p className="text-center mt-10">Loading...</p>
+                    <p className=" hidden text-center mt-10">Loading...</p>
                 ) : (
 
                     <div className=" hidden h-full rounded-2xl bg-white shadow-2xl shadow-indigo-300 md:border border-mist-300 w-full md:flex flex-col p-3 ">
